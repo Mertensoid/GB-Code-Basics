@@ -1,0 +1,36 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+    
+    alert("Добро пожаловать!");
+
+do{
+    var sum = +prompt("Пожалуйста, введите сумму в рублях, которую хотите вложить");
+
+} while(isNaN(sum) || sum < 0);
+    
+do{
+
+    var procent = +prompt("Укажите процентную ставку");
+} while(isNaN(procent) || procent < 0);
+
+var srok = 1;
+
+while(srok<=5){
+
+    var sumvklad=sum + (sum*procent/100);
+    srok++;
+
+    if(srok==2){
+        var time=" год";
+    }
+    if(srok>2&&srok<5){
+        var time=" года";
+    } 
+    if(srok==5){
+        var time=" лет";
+    }
+    document.write("Через " + (srok-1) + time +"  на вашем вкладе: " + sumvklad.toFixed(    2) + "<br/>");
+sum=sumvklad;
+}
+
+</script>

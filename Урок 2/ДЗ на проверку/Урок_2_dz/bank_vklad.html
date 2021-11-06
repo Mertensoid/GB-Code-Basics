@@ -1,0 +1,22 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	var cash = prompt ('Введите размер вклада');
+	var bank_perc = prompt ('Введите процентную ставку(без знака %)');
+	var period = prompt ('Введите срок(в годах)');
+	var res=1*cash;
+	var n = 0;
+
+	do {
+  		document.write ('Год ' + n + ' ' + Math.round(res) + ' руб.<br>');
+  		if (n<period) {
+  		res=res+(res*bank_perc/100);
+  		n=n+1;
+  	}else{
+   		break;
+  	}
+		}while (true);
+
+	res=Math.round(res);
+	n=res-cash
+	alert('Итоговая сумма ' + res + ' руб. ' + 'Ваш доход ' + n + ' руб.');
+</script>

@@ -1,0 +1,37 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	alert("Угадайте загадку(вводите ответ с маленькой буквы:");
+	var answer_1="замок";
+	var answer_2="машина";
+	var answer_3="медведь";
+	var score=0;
+
+	var user_answer_1=prompt("Не лает, не кусает, а в дом не пускает: ");
+	if (user_answer_1==answer_1){
+		document.write('1)Правильно - '+answer_1);
+		score=score+1;
+	}else{
+		document.write('1)Не правильно! Правильный ответ - '+answer_1);
+	};
+
+	var user_answer_2=prompt("Четыре колеса, резиновые шины, мотор и тормоза... Что это?: ");
+	if (user_answer_2==answer_2){
+		document.write(' 2)Правильно - '+answer_2);
+		score=score+1;
+	}else{
+		document.write(' 2)Не правильно! Правильный ответ - '+answer_2);
+	};
+
+	var user_answer_3=prompt("Кто в малине знает толк? Косолапый бурый: ");
+	if (user_answer_3==answer_3){
+		document.write(' 3)Правильно - '+answer_3);
+		score=score+1;
+	}else{
+		document.write(' 3)Не правильно! Правильный ответ - '+answer_3);
+	};
+
+alert ('Поздравляем! Вы угадали '+score+' загадки');
+
+</script>
+

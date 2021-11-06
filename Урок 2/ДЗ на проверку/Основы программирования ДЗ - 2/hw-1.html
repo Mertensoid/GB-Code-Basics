@@ -1,0 +1,44 @@
+<meta charset="UTF-8">
+
+<script>
+
+    var userAnswer = prompt("Загадка №1 - \n Заплелись густые травы,\n Закудрявились луга,\n Да и сам я весь кудрявый,\n Даже завитком рога.");
+    var score = 0;
+    userAnswer = userAnswer.toLowerCase();
+    if (userAnswer == "баран" || userAnswer == "барашек") {
+        alert("Поздравляю, это правильный ответ");
+        score++;
+    } else {
+        alert("Вы не угадали");
+    }
+
+    userAnswer = prompt("Загадка №2 - \n Сверкая огромным хвостом в темноте \n Несется среди ярких звезд в пустоте, \n Она не звезда, не планета, \n Загадка Вселенной - … .");
+    userAnswer = userAnswer.toLowerCase();
+    if (userAnswer == "комета") {
+        alert("Поздравляю, это правильный ответ");
+        score++;
+    } else {
+        alert("Вы не угадали");
+    }
+
+    userAnswer = prompt("Загадка №3 - \n Кто любить не устает, \n Пироги для нас печет, \n Вкусные оладушки? \n Это наша...");
+    userAnswer = userAnswer.toLowerCase();
+    if (userAnswer == "бабушка") {
+        alert("Поздравляю, это правильный ответ");
+        score++;
+    } else {
+        alert("Вы не угадали");
+    }
+
+    userAnswer = prompt("Загадка №4 - \n Золотой и молодой \n За неделю стал седой, \n А денечка через два \n Облысела голова. \n Спрячу-ка в карманчик \n Бывший ...");
+    userAnswer = userAnswer.toLowerCase();
+    if (userAnswer == "одуванчик") {
+        alert("Поздравляю, это правильный ответ");
+        score++;
+    } else {
+        alert("Вы не угадали");
+    }
+    
+    alert("Вы угадали " + score + " загадок");
+    
+</script>
