@@ -1,0 +1,16 @@
+<meta charset="utf-8">
+<script>
+
+	var dollar=72.58;
+	var euro=83.64;
+
+	var number1=prompt("Для перевода рублей в доллары и евро введите сумму в рублях");
+
+	number1=parseInt(number1);
+
+	var result_dollar=(number1/dollar);
+	var result_euro=(number1/euro);
+
+	alert(number1+" рублей = "+result_dollar.toFixed(2)+" долларов или "+result_euro.toFixed(2)+" евро.");
+
+</script>

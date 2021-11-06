@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <title>1. Конвертер валют.</title>
+
+    <script>
+        var rateEUR = 95; // стоимость одного евро в рублях
+        var rateUSD = 75; // стоимость одного доллара в рублях
+
+        var amountRUB = prompt("Сколько рублей вы хотите сконвертировать?");
+        amountRUB = parseFloat(amountRUB);
+
+        if (!amountRUB) {
+            alert("Извините, не получилось опредить введенную сумму!");
+        } else {
+            var amountEUR = amountRUB / rateEUR;
+            var amountUSD = amountRUB / rateUSD;
+
+            var message = "Вы можете поменять " + amountRUB.toFixed(2) +
+                " RUB на " + amountEUR.toFixed(2) + " EUR или " + amountUSD.toFixed(2) + " USD";
+
+            alert(message);
+        }
+    </script>
+
+</head>
+<body>
+<div>
+    <p>Программа хранит в двух переменных курс доллара и евро.<br>
+        В первой переменной у вас хранится стоимость одного евро в рублях, во второй - стоимость одного доллара в рублях.<br>
+        Вы спрашиваете у пользователя, сколько рублей он хочет сконвертировать, получаете это число и считаете.<br>
+        Результат надо вывести на страницу с помощью alert.
+    </p>
+
+    <div>
+        <a href="">перезапустить</a>
+    </div>
+</div>
+</body>
+</html>

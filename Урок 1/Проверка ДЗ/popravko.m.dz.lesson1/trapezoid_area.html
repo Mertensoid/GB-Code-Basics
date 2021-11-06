@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>2. Подсчет площади трапеции.</title>
+
+    <script>
+
+        var lengthA = prompt("Введите длину основания а:");
+        lengthA = parseFloat(lengthA);
+
+        var lengthB = prompt("Введите длину основания b:");
+        lengthB = parseFloat(lengthB);
+
+        var height = prompt("Введите высоту:");
+        height = parseFloat(height);
+
+        if (!lengthA || !lengthB || !height) {
+            alert("Извините, при вводе входных данных допущена ошибка!");
+        } else {
+            var area = ((lengthA + lengthB) / 2) * height;
+
+            var message = "Площадь трапеции будет равна " + area.toFixed(2);
+
+            alert(message);
+        }
+
+    </script>
+
+</head>
+<body>
+<div>
+    <p>Пользователь вводит длину оснований трапеции (a и b), а также высоту трапеции h.<br>
+        Программа выводит сообщение: «Площадь трапеции будет равна &lt;значение&gt;».<br>
+        Площадь вычисляется по формуле<br>
+        <b>((a + b) / 2) * h</b><br>
+        , где a, b - основания, h - высота.
+    </p>
+
+    <div>
+        <a href="">перезапустить</a>
+    </div>
+</div>
+</body>
+</html>
