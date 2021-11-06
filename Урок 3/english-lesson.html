@@ -1,0 +1,43 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var easywords = [
+		["apple" ,"яблоко"],
+		["orange" ,"апельсин"],
+		["pine-apple" ,"ананас"],
+		["tomato" ,"помидор"],
+		["carrot" ,"морковка"]
+	]
+
+	var hardwords = [
+		["chainsaw" ,"бензопила"],
+		["attention" ,"внимание"],
+		["homework" ,"домашняя работа"],
+		["bay" ,"бухта"],
+		["joke" ,"шутка"]
+	]
+
+	function learnEnglish(words) {
+		while (words.length > 0) {
+			var randomWord = parseInt(Math.random() * words.length);
+			var userTranslate = prompt("Как переводится слово " + words[randomWord][0] + "?");
+			if (userTranslate == words[randomWord][1]){
+				alert("Верно!");
+				words.splice(randomWord, 1);
+			} else {
+				alert("Неверно! Правильный ответ - " + words[randomWord][1]);
+			}
+		}
+	}
+	
+	learnEnglish(easywords);
+
+	learnEnglish(hardwords);
+
+	alert ("Поздравляем! Вы владеете английским в совершенстве!");
+	
+
+
+
+
+</script>

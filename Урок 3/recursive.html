@@ -1,0 +1,49 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	alert("Приветствую в программе по обучению слепой печати!");
+
+	function generateText(letters, length){
+		var text = "";
+		for (var i = 0; i < length; i++) {
+			ranLetter = letters[getRandomNumber(letters.length - 1)];
+			text = text + ranLetter;
+		}
+		return text;
+	}
+
+	function getRandomNumber(n){
+		return Math.round(Math.random() * n);
+	}
+
+	function gameLevel(text, letters){
+		while(true) {
+			alert (text);
+
+			var userText = prompt(letters);
+			if (userText == letters) {
+				alert ("Все верно!");
+				break;
+			} else {
+				alert("Вы ошиблись! Попробуйте снова!");
+			}
+		}
+	}
+
+	var textLevel1 = ("Положите руки на клавиатуру");
+	var lettersLevel1 = generateText(["ф", "а"], 10);
+
+	gameLevel(textLevel1,lettersLevel1);
+
+	var textLevel2 = ("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. Повторяйте за мной");
+	var lettersLevel2 = generateText(["ы", "в"], 10);
+
+	gameLevel(textLevel2,lettersLevel2);
+
+	var textLevel3 = ("Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний -— на Л, указательный — на О. Запомните расположение пальцев");
+	var lettersLevel3 = generateText(["о", "ж"], 10);
+
+	gameLevel(textLevel3,lettersLevel3);
+	
+
+</script>

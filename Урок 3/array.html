@@ -1,0 +1,44 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	// var num1 = 45;
+	// var num2 = 12;
+	// var num3 = 67;
+	// var num4 = 33;
+	// var num5 = 54;
+
+	// var numbers = [42, 56, 96, 14, 28];
+
+	function checkAnswer(userAnswer,checkDigit){
+		if (userAnswer == checkDigit){
+			alert ("Верно!");
+		} else {
+			alert ("Неверно! Правильный ответ - " + checkDigit);
+		}
+	}
+
+	function getRandomMath(max) {
+		return Math.round(Math.random() * max);
+	}
+
+	var numbers = [];
+
+	for (var i = 0; i < 5; i++) {
+		var randomMath = getRandomMath(100);
+		numbers.push(randomMath);
+	}
+
+	alert("Запомните числа и их порядок: " + numbers);
+
+	var userAnswer = +prompt("Какое было первое число?"); 
+	checkAnswer(userAnswer,numbers[0]);
+	
+	var userAnswer = +prompt("Какое было последнее число?"); 
+	checkAnswer(userAnswer,numbers[ numbers.length - 1 ]);
+
+	var n = getRandomMath(numbers.length) + 1;
+
+	var userAnswer = +prompt("Какое было " + (n + 1) + " число?"); 
+	checkAnswer(userAnswer,numbers[n]);
+
+</script>
