@@ -1,0 +1,89 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function func_a(n){
+		var array_n=[];
+		for (i=1; i<=n; i++){
+			array_n.push(i);
+		}
+		return array_n;
+	}
+
+	function inpute_array(){
+	    var user_array=[];
+	    while (true){
+	        var value=+prompt('Добавьте элемент массива (для остановки, отправьте пустое сообщение):');
+	            if (value == "") break;
+	        user_array.push(value);
+	    }
+	    return user_array;
+	}
+
+	function array_sum(n){
+	    var user_array=n;
+	    var result=0;
+	    for (i=0; i<user_array.length; i++){
+	            result=result+user_array[i];
+	        }
+	        return result;
+	}
+
+	function array_max(n){
+	    var user_array=n;
+	    var result=0;
+	    for (i=0; i<user_array.length; i++){
+	        if (result<user_array[i]){
+	            result=user_array[i];
+	        }
+	    }
+	    return result;
+	}
+
+	function array_min(n){
+	    var user_array=n;
+	    var result=user_array[0];
+	    for (i=0; i<user_array.length; i++){
+	        if (result>user_array[i]){
+	            result=user_array[i];
+	        }
+	    }
+	    return result;
+	}
+
+	function array_even(n){
+	    var user_array=n;
+	    var result_array=[];
+	    for (i=0; i<user_array.length; i++){
+	        if ((user_array[i]%2)==0){
+	            result_array.push(user_array[i]);
+	        }
+	    }
+	    return result_array;
+	}
+
+	alert('Задание а. Создание последовательности.')
+	var array_a=func_a(prompt('a)Введите количество элементов массива'));
+	alert(array_a);
+	document.write('a)Ваш массив '+array_a+'<br>');
+
+	alert('Задание b. Определение суммы чисел.')
+	var b_sum=array_sum(inpute_array());
+	document.write('b)Сумма ваших чисел: '+b_sum+'<br>');
+	alert(b_sum);
+
+	alert('Задание c. Определение максимального значения в массиве.')
+	var c_max=array_max(inpute_array());
+	document.write('с)Максимальное значение: '+c_max+'<br>');
+	alert(c_max);
+
+	alert('Задание d. Определение минимального значения в массиве.')
+	var d_min=array_min(inpute_array());
+	document.write('d)Минимально значение: '+d_min+'<br>');
+	alert (d_min);
+
+	alert('Задание f. Выделение четных элементов массива.')
+	var f_even=array_even(inpute_array());
+	document.write('f)Четные числа вашего массива: '+f_even+'<br>');
+	alert (f_even);
+
+</script>

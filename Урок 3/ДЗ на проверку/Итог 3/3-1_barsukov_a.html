@@ -1,0 +1,72 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+		
+	function massifN(n) {
+		var x = 0
+		var numbers = [];
+		for (var i = 0; i < (n); i++) {
+		var x = x+1;
+		numbers.push(x);
+		} 
+		return numbers;
+	}
+	
+	function summArray(amount) {
+		var lengthArray = (amount.length);
+		var summ = amount[0]
+		for (var i = 1; i < lengthArray; i++) {
+		var summ = summ + amount[i];
+		}
+		return summ;
+	}
+
+	function maxArray(amount) {
+		var lengthMaxArray = (amount.length);
+		var max = amount[0]
+		for (var i = 1; i < lengthMaxArray; i++) {
+			if (max < amount[i]) {
+				max = amount[i];
+			}
+		}
+		return max;
+	}
+
+	function minArray(amount) {
+		var lengthMinArray = (amount.length);
+		var min = amount[0]
+		for (var i = 1; i < lengthMinArray; i++) {
+			if (min > amount[i]) {
+				min = amount[i];
+			}
+		}
+		return min;
+	}
+
+	function evenArray(amount) {
+		var lengthArray = (amount.length);
+		
+		for (var i = 0; i < lengthArray; i++) {
+			if ((amount[i] % 2) == 0) {
+      		even.push(amount[i]);
+      		}
+		}
+		
+	}
+
+	var n = parseInt(prompt("Введите количество элементов массива в виде целого положительного числа"));
+	massifN(n);
+	var numbers1 = massifN(n);
+	alert("Список элементов массива: " + numbers1);
+
+	var summN = summArray(numbers1);
+	alert("Сумма элементов массива: " + summN);
+	
+	alert("Максимальное число в массиве: " + maxArray(numbers1));	
+
+	alert("Минимальное число в массиве: " + minArray(numbers1));
+	
+	var even = [];
+	evenArray(numbers1);
+	alert("Чётные числа массива: " + even);
+	
+</script> 

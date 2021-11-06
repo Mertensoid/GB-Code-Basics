@@ -1,0 +1,31 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	alert("Угадайте загадку (вводите ответ с маленькой буквы):");
+	var answer_1="замок";
+	var answer_2="машина";
+	var answer_3="медведь";
+	var score=0;
+	var user_answer;
+
+	function ask_func (ask, answer){
+			var user_answer=prompt(ask);
+			if (user_answer==answer){
+				alert('Правильно - '+answer);
+				score=score+1;
+			}else{
+				alert('Не правильно! Парвильный ответ - '+answer);
+			};
+			return user_answer
+	};
+
+	user_answer=ask_func('1)Не лает, не кусает, а в дом не пускает: ', answer_1);
+	document.write('1)Не лает, не кусает, а в дом не пускает: '+answer_1+". Ваш ответ: "+user_answer+'<br>');
+	user_answer=ask_func('2)Четыре колеса, резиновые шины, мотор и тормоза... Что это?: ', answer_2);
+	document.write('2)Четыре колеса, резиновые шины, мотор и тормоза... Что это? '+answer_2+". Ваш ответ: "+user_answer+'<br>');
+	user_answer=ask_func('3)Кто в малине знает толк? Косолапый бурый: ', answer_3);
+	document.write('3)Кто в малине знает толк? Косолапый бурый:  '+answer_3+". Ваш ответ: "+user_answer+'<br>');
+	alert('Вы дали '+score+' правильных ответ(а)');
+	document.write('Количество правильных ответов: '+score);
+
+</script>

@@ -1,0 +1,35 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	function blind_game(letters, length){
+		while (true){
+			alert('Поставьте мизинец левой руки на букву Ф, безымянный палец — на Ы, средний — на В, указательный — на А. Мизинец правой руки на букву Ж, безымянный палец — на Д, средний — на Л, указательный — на О. Запомните расположение пальцев. Повторяйте за мной');
+			var text="";
+			for(i=0; i<length; i++){
+				text=text+letters[Math.floor(Math.random(0,1)*(letters.length))];
+			}
+			var userText=prompt(text);
+			if (userText==text){
+				alert('Все верно!');
+				break;
+			}else{
+				alert('Вы ошиблись, попробуйте снова!');
+			}
+		}
+		return userText;
+	}
+
+	var level_1=[['ф','ы'], 10];
+	var level_2=[['ы','в'], 10];
+	var level_3=[['о','ж'], 10];
+
+	alert('Вас приветствует тренажер слепой печати!');
+	var user_result=blind_game(level_1[0], level_1[1]);
+	alert('Правильно: '+user_result+'. Вы переходите на уровень 2');
+	var user_result=blind_game(level_2[0], level_2[1]);
+	alert('Правильно: '+user_result+'. Вы переходите на уровень 3');
+	var user_result=blind_game(level_3[0], level_3[1]);
+	alert('Правильно: '+user_result+'. Вы молодец!');
+
+
+</script>

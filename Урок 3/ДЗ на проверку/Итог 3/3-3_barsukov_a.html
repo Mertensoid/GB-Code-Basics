@@ -1,0 +1,46 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	let riddles = [
+		["Бежит, бежит — не выбежит.", "река", "ручей"],
+		["Белая морковка зимой растет, весною бесследно исчезает.", "сосулька"],
+		["Над бабкиной избушкой висит хлеба краюшка.", "месяц"],
+		["Что легко носить, а трудно сосчитать. Даже с помощью посторонних людей.", "волосы"],
+	];
+	
+
+		
+	alert("Предлагаем поиграть в игру «ЗАГАДКИ».\n" + "Мы предложим Вам по очереди загадки в количестве " + riddles.length + " шт. и сообщим общее количество верных ответов.");
+
+	function answers(reply) {
+		let score = 0;
+		for (var i = 0; i < riddles.length; i++) {
+			let riddleQuestion = prompt("Пожалуйста, введите ответ на загадку:\n" +  riddles[i][0]);
+			riddleQuestion = riddleQuestion.toLowerCase();
+			if(riddleQuestion == riddles[i][1] || riddleQuestion == riddles[i][2]) {
+		alert("Поздравляем! Ваш ответ верный.");
+		score = score + 1;
+			}	else {
+				alert("Правильный ответ: " + riddles[i][1]);
+				if (riddles[i][2] != undefined) {
+					alert("или " + riddles[i][2]);
+				
+				}
+				score = score + 0;
+				}
+		}
+	alert("Игра закончена.\nВаше количество баллов: " + score);
+	}
+
+
+	answers(riddles);	
+
+
+</script> 
+
+
+
+
+
+
+
