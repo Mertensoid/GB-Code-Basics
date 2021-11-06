@@ -1,0 +1,12 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var sum = +prompt("Введите сумму вклада");
+	var percent = +prompt("Введите процентную ставку");
+
+	for (var i = 1; i <= 5; i++) {
+		sum += (sum * percent / 100);
+		document.write("Сумма вклада после " + i + "-ого года: " + sum + "<br>");
+	}
+
+</script>
