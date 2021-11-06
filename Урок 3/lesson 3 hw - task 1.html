@@ -1,0 +1,63 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	function getArray(n) {
+		var outArray = [];
+		for (var i = 1; i <= n; i++) {
+			outArray.push(i);
+		}
+		return outArray;
+	}
+
+	function getSum(array){
+		var sum = 0;
+		for (var i = 0; i < array.length; i++) {
+			sum = sum + array[i];
+		}
+		return sum;
+	}
+
+	function getMax(array){
+		var max = array[0];
+		for (var i = 1; i < array.length; i++) {
+			if (max <= array[i]) {
+				max = array[i];
+			}
+		}
+		return max;
+	}
+
+	function getMin(array){
+		var min = array[0];
+		for (var i = 1; i < array.length; i++) {
+			if (min >= array[i]) {
+				min = array[i];
+			}
+		}
+		return min;
+	}
+
+	function getEven(array){
+		var outArray = [];
+		for (var i = 0; i < array.length; i++) {
+			if (array[i] % 2 == 0) {
+				outArray.push(array[i]);
+			}
+		}
+		return outArray;
+	}
+
+	var testArray = getArray(100);
+	alert(testArray);
+	var sum = getSum(testArray);
+	alert(sum);
+	var max = getMax(testArray);
+	alert(max);
+	var min = getMin(testArray);
+	alert(min);
+	var evenArray = getEven(testArray);
+	alert(evenArray);
+
+
+
+</script>

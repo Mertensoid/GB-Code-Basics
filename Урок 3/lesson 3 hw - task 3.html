@@ -1,0 +1,39 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+
+	count = 0;	
+	
+	function riddleGame(riddle, answers){
+		var userAnswer = prompt(riddle);
+
+		if (answers.includes(userAnswer)){
+			alert("Поздравляем! Вы ответили верно!");
+			count++;
+		} else {
+			alert("К сожалению ответ неверный!");
+		}
+	}
+
+	var riddle = "В остроконечной шляпе ходит,\nУжас на детей наводит,\nВарит зелья в чугунке,\nИ летает в темноте!";
+	var answers = ["Ведьма", "ведьма", "Старуха с метлой", "старуха с метлой"];
+
+	riddleGame(riddle, answers);
+	
+	var riddle = "У нее золотистая кожа,\nА еще очень страшная рожа,\nОна круглая, как шар,\nИ светится как фонарь.";
+	var answers = ["Тыква", "тыква", "Тыковка", "тыковка"];
+
+	riddleGame(riddle, answers);
+
+	var riddle = "Символ ночи, символ зла,\nВверх ногами спит она!";
+	var answers = ["Летучая мышь", "летучая мышь", "Летучая мышка", "летучая мышка"];
+
+	riddleGame(riddle, answers);
+
+	var riddle = "Жертву по ночам он ищет,\nЧтобы кровью насладиться.\nМожет стать летучей мышью.\nТолько чеснока боится.";
+	var answers = ["Вампир", "вампир", "Дракула", "дракула"];
+
+	riddleGame(riddle, answers);
+
+	alert("Игра окончена! У вас " + count + " верных ответов!");
+
+</script>
