@@ -6,27 +6,27 @@
 	<link rel="stylesheet" href="style.css"> 
 	<script type="text/javascript">
 
-		var score = 0;
+		var count = 0;	
+	
+		function riddleGame(userAnswer, answers){
 
-		function checkAnswer(inputId, answers){
-			var userAnswer = document.getElementById(inputId).value;
-			userAnswer = userAnswer.toLowerCase();
-			for(var i = 0; i < answers.length; i++){
-				if(userAnswer == answers[i]){
-					score++;
-					break;
-				}
+			if (answers.includes(userAnswer)) {
+				count++;
 			}
 		}
-		
-		function checkAnswers() {
 
-			checkAnswer("userAnswer1", ["сон", "сноведение"]);
-			checkAnswer("userAnswer2", ["морской", "укус акулы"]);
-			checkAnswer("userAnswer3", ["шахматный", "мертвый"]);
+		function checkAnswers(){
+			var userAnswer1 = document.getElementById("userAnswer1").value.toLowerCase();
+			var userAnswer2 = document.getElementById("userAnswer2").value.toLowerCase();
+			var userAnswer3 = document.getElementById("userAnswer3").value.toLowerCase();
+			var userAnswer4 = document.getElementById("userAnswer4").value.toLowerCase();
 
-			alert("Вы отгадали " + score + " загадок");
+			riddleGame(userAnswer1, ["ведьма", "старуха с метлой"]);
+			riddleGame(userAnswer2, ["тыква", "тыковка"]);
+			riddleGame(userAnswer3, ["летучая мышь", "летучая мышка"]);
+			riddleGame(userAnswer4, ["вампир", "дракула"]);
 
+			alert("Ваш счет: " + count + "!");
 		}
 
 	</script>
@@ -48,14 +48,17 @@
 
 			<div class="box">
 
-				<p>Что можно увидеть с закрытыми глазами?</p>
+				<p>В остроконечной шляпе ходит,<br>Ужас на детей наводит,<br>Варит зелья в чугунке,<br>И летает в темноте!</p>
 				<input type="text" id="userAnswer1">
 
-				<p>Какой болезнью никто не болеет на суше?</p>
+				<p>У нее золотистая кожа,<br>А еще очень страшная рожа,<br>Она круглая, как шар,<br>И светится как фонарь.</p>
 				<input type="text" id="userAnswer2">
 
-				<p>Какой конь не ест овса?</p>
+				<p>Символ ночи, символ зла,<br>Вверх ногами спит она!</p>
 				<input type="text" id="userAnswer3">
+
+				<p>Жертву по ночам он ищет,<br>Чтобы кровью насладиться.<br>Может стать летучей мышью.<br>Только чеснока боится.</p>
+				<input type="text" id="userAnswer4">
 
 				<br>
 				<a href="#" onClick="checkAnswers();">Ответить</a>
@@ -70,7 +73,7 @@
 
 </div>
 <div class="footer">
-	Copyright &copy; Vasily Pupkin
+	Copyright &copy; Matsuk Maksim
 <div>
 
 

@@ -1,0 +1,45 @@
+<meta charset="utf-8">
+<script type="text/javascript">
+	
+	var answer = parseInt(Math.random() * 100);
+
+	do {
+		var userAnswer1 = prompt("Игрок 1, угадайте число, загаданное компьютером");
+		if (userAnswer1 == "q") {
+			alert("Игра завершена игроком 1");
+			break;
+		}
+
+		var userAnswer2 = prompt("Игрок 2, угадайте число, загаданное компьютером");
+
+		if (userAnswer2 == "q") {
+			alert("Игра завершена игроком 2");
+			break;
+		}
+
+		var userAnswer1 = parseInt(userAnswer1);
+		var userAnswer2 = parseInt(userAnswer2);
+
+		if ((userAnswer1 == answer) && (userAnswer2 == answer)) {
+			alert("Поздравляем! Оба игрока угадали! Ничья!");
+		} else if ((userAnswer1 == answer) && (userAnswer2 != answer)) {
+			alert("Поздравляем! Игрок 1 угадал!");
+		} else if ((userAnswer1 != answer) && (userAnswer2 == answer)) {
+			alert("Поздравляем! Игрок 2 угадал!");
+		} else if ((userAnswer1 < answer) && (userAnswer2 < answer)) {
+			alert("Загаданное число больше! ");
+		} else {
+			if ((userAnswer1 > answer) && (userAnswer2 > answer)) {
+				alert("Загаданное число меньше! ");
+			} else if ((userAnswer1 > answer) && (userAnswer2 < answer)) {
+				alert("Игрок 1 указал слишком большое число!\nИгрок 2 указал слишком маленькое число! ");
+			} else if ((userAnswer1 < answer) && (userAnswer2 > answer)) {
+				alert("Игрок 1 указал слишком маленькое число!\nИгрок 2 указал слишком большое число! ");
+			}
+			alert("Попробуйте еще раз!");
+		}
+	} while ((userAnswer1 != answer) && (userAnswer2 != answer))
+
+	alert("Правильный ответ: " + answer);
+	
+</script>
