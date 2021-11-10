@@ -68,13 +68,9 @@
 </head>
 <body>
 	<div class="content">
-		<div class="header">
-			<a href="index.html">Главная</a>
-			<a href="puzzle.html">Загадки</a>
-			<a href="guess.html">Угадайка</a>
-			<a href="#">Угадайка (2 игрока)</a>
-			<a href="generator.html">Генератор паролей</a>
-		</div>
+		<?php
+			include "menu.php"
+		?>
 		<div class="contentWrap">
 		    <div class="content">
 		        <div class="center">

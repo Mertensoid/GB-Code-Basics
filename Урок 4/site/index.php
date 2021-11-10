@@ -8,13 +8,9 @@
 <body>
 
 <div class="content">
-	<div class="header">
-		<a href="#">Главная</a>
-		<a href="puzzle.html">Загадки</a>
-		<a href="guess.html">Угадайка</a>
-		<a href="guess-multi.html">Угадайка (2 игрока)</a>
-		<a href="generator.html">Генератор паролей</a>
-	</div>
+<?php
+	include "menu.php";
+?>
 
 	<h1>Личный сайт студента GeekBrains</h1>
 
@@ -35,7 +31,7 @@
 	</div>
 </div>
 <div class="footer">
-	Copyright &copy; Matsuk Maksim
+	Copyright &copy; <?php echo date("Y");?> Matsuk Maksim
 <div>
 
 
